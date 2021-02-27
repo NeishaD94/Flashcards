@@ -1,0 +1,20 @@
+## Flashcard
+
+📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
+
+## Lab 1
+
+### App Description
+`TODO://` This is the beginning of my iOS flashcard application.
+
+### App Walk-though
+
+<img src="http://g.recordit.co/sTs8H54V6g.gif" width=200><br>
+
+
+## Required
+- [x] Create New Project in Xcode
+- [x] Add a view for the front side of the flashcard to display the question
+- [x] Add a view for the back side of the flashcard to display the answer
+- [x] Build in logic to show the answer side when the card is tapped
+- [x] Push code to GitHub
