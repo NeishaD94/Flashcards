@@ -8,7 +8,7 @@
 
 ### App Walk-though
 
-<img src="http://g.recordit.co/3o1PSR6XA2.gif" width=200><br>
+<img src="http://g.recordit.co/3mgHtrlrYR.gif" width=200><br>
 
 ## Required
 - [x] User can open the creation screen
