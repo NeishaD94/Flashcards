@@ -1,10 +1,24 @@
 ## Flashcard App
-📝 `NOTE` Paste this template at the top of your existing `README.md` file from the last lab.
+## Lab 3
+
+### App Description
+`TODO://` Users will be allowed to create as many flashcards as they want, browse through them back and forth and store data of created flashcards even after they close the app.
+
+### App Walk-though
+
+<img src="http://g.recordit.co/lkk6ulqLV4.gif" width=200><br>
+
+`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
 
 ## Lab 2
 
 ### App Description
-`TODO://` My iOS Flashcard app with additional features to add more flashcards to the bundle..
+`TODO://` My iOS Flashcard app with additional features to create more flashcards to the bundle.
 
 ### App Walk-though
 
@@ -15,8 +29,6 @@
 - [x] User can cancel out of the creation screen
 - [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
 - [x] Push code to GitHub
-
-📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users stories you completed and how your app looked and functioned at each step.
 
 ## Lab 1
 
