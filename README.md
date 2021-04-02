@@ -1,4 +1,25 @@
 ## Flashcard App
+## Lab 4
+
+### App Description
+`TODO://` Add app description
+
+### App Walk-though
+`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
+
+<img src="YOUR_GIF_URL_HERE" width=200><br>
+
+`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+
+## Required
+- [X] User should see the app icon 
+- [X] User should see a splash screen
+- [X] User should see an flip animation when revealing the answer
+- [ ] User should see a slide animation when going to the next flashcard
+- [ ] User should see a slide animation when going to the previous flashcard
+- [ ] Push code to GitHub
+
+
 ## Lab 3
 
 ### App Description
