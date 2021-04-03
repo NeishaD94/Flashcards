@@ -2,23 +2,21 @@
 ## Lab 4
 
 ### App Description
-`TODO://` Add app description
+`TODO://` I added some flipping and sliding animation to the flashcards as well as an app icon and a splash screen for when the app first starts up.
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+<img src="http://g.recordit.co/1HRy2R4sl2.gif" width=200><br>
 
 ## Required
 - [X] User should see the app icon 
 - [X] User should see a splash screen
 - [X] User should see an flip animation when revealing the answer
-- [ ] User should see a slide animation when going to the next flashcard
-- [ ] User should see a slide animation when going to the previous flashcard
-- [ ] Push code to GitHub
-
+- [X] User should see a slide animation when going to the next flashcard
+- [X] User should see a slide animation when going to the previous flashcard
+- [X] Push code to GitHub
+## Optional
+- [X] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
 
 ## Lab 3
 
