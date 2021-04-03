@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var card: UIView!
     
     // Array to hold our flashcards
     var flashcards = [Flashcard]()
@@ -43,8 +44,29 @@ class ViewController: UIViewController {
             updateLabels()
             updateNextPrevButtons()
         }
+        
+         card.layer.cornerRadius = 20.0
+         frontLabel.layer.cornerRadius = 20.0
+         frontLabel.clipsToBounds = true
+         backLabel.layer.cornerRadius = 20.0
+         backLabel.clipsToBounds = true
+         card.layer.shadowRadius = 15.0
+         card.layer.shadowOpacity = 0.2
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           
+           // First start with the flashcard invisible and slightly smaller in size
+           card.alpha = 0.0
+           card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+         
+           // Animation
+           UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: {
+               self.card.alpha = 1.0
+               self.card.transform = CGAffineTransform.identity
+              
+           })
+       }
     @IBAction func didTapOnPrev(_ sender: Any) {
         
         //Increase current index
@@ -55,6 +77,9 @@ class ViewController: UIViewController {
         
         //Update buttons
         updateNextPrevButtons()
+        
+        // Animation
+        animateCardOut(animationDirection: "moveEverythingRight")
     }
     
     @IBAction func didTapOnNext(_ sender: Any) {
@@ -67,26 +92,70 @@ class ViewController: UIViewController {
         
         //Update buttons
         updateNextPrevButtons()
+        
+        // Animation
+        animateCardOut(animationDirection: "moveEverythingLeft")
     }
+    func animateCardOut(animationDirection: String) {
+         UIView.animate(withDuration: 0.3, animations: {
+             if animationDirection == "moveEverythingLeft"{
+                 // Move the card to the left by changing the x coordinates
+                 self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+             }else{
+                 // Move the card to the right
+                 self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+             }
+             
+         }, completion: { finished in
+             // Update labels
+             self.updateLabels()
+             
+             // Run other animation
+             if animationDirection == "moveEverythingLeft"{
+                 self.animateCardIn(startingPosition: 300.0)
+             }else{
+                 self.animateCardIn(startingPosition: -300.0)
+             }
+             
+         })
+     }
+     
+     func animateCardIn(startingPosition: CGFloat){
+         // This will move the card to the center. start the card offscreen so its not visible then move to center
+         card.transform = CGAffineTransform.identity.translatedBy(x: startingPosition, y: 0.0)
+         
+         // Animate card going back to its original position
+         UIView.animate(withDuration: 0.3) {
+             self.card.transform = CGAffineTransform.identity
+         }
+     }
     
     func updateLabels() {
-        //Get cureent flashcard
+        // Get current flashcard
         let currentFlashcard = flashcards[currentIndex]
         
-        //Update labels
+        // Update labels
         frontLabel.text = currentFlashcard.question
         backLabel.text = currentFlashcard.answer
     }
     
-  
-    
- 
-    
-    
+
+     
+        
     
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        frontLabel.isHidden = true;
+        flipFlashcard()
     }
+    
+    func flipFlashcard() {
+        
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: { self.frontLabel.isHidden = true
+        })
+        
+    }
+      
+        
+    
     
     func saveAllFlashcardsToDisk() {
         
@@ -150,7 +219,7 @@ class ViewController: UIViewController {
             nextButton.isEnabled = true
         }
     }
-    
+
 
     override func prepare(for segue:UIStoryboardSegue, sender: Any?) {
 
